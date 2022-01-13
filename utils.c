@@ -6,7 +6,7 @@
 /*   By: rchampli <rchampli@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/11 00:42:56 by rchampli          #+#    #+#             */
-/*   Updated: 2022/01/13 21:30:56 by rchampli         ###   ########.fr       */
+/*   Updated: 2022/01/13 23:31:55 by rchampli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,13 +39,11 @@ static int	ft_isspace(int c)
 
 int	ft_atol(const char *nptr)
 {
-	long long	n;
-	int			sign;
-	long long	ll_check;
+	long	n;
+	int		sign;
 
 	n = 0;
 	sign = 1;
-	ll_check = LLONG_MAX / 10;
 	while (ft_isspace(*nptr))
 		nptr++;
 	if (*nptr == '+' || *nptr == '-')
@@ -56,11 +54,9 @@ int	ft_atol(const char *nptr)
 	}
 	while (ft_isdigit(*nptr))
 	{
-		if (sign == 1 && (n > ll_check || (n == ll_check && *nptr - '0' >= 7)))
-			return (-1);
-		if (sign == -1 && (n > ll_check || (n == ll_check && *nptr - '0' >= 8)))
-			return (0);
 		n = 10 * n + (*nptr++ - '0');
 	}
+	if (sign * n > INT_MAX || sign * n < INT_MIN)
+		ft_error("Error");
 	return (sign * (int)n);
 }

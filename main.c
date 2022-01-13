@@ -6,7 +6,7 @@
 /*   By: rchampli <rchampli@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/11 01:08:32 by rchampli          #+#    #+#             */
-/*   Updated: 2022/01/11 01:08:35 by rchampli         ###   ########.fr       */
+/*   Updated: 2022/01/13 22:53:57 by rchampli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,10 +71,7 @@ int	main(int argc, char *argv[])
 		init_stack(&stack_a, STACK_A);
 		init_stack(&stack_b, STACK_B);
 		if (parse_argvs(argc, argv, stack_a) == false)
-		{
-			ft_putstr_fd("Error\n", STDERR_FILENO);
-			exit(EXIT_FAILURE);
-		}
+			ft_error("Error");
 		if (check_sort(stack_a, stack_a->num_of_data) == false)
 			sort_stack(stack_a, stack_b);
 		free_stack(&stack_a);

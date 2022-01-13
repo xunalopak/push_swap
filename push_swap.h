@@ -6,7 +6,7 @@
 /*   By: rchampli <rchampli@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/11 00:44:36 by rchampli          #+#    #+#             */
-/*   Updated: 2022/01/13 21:36:33 by rchampli         ###   ########.fr       */
+/*   Updated: 2022/01/13 21:45:56 by rchampli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,5 +98,7 @@ void	ft_putchar_fd(char c, int fd);
 int		ft_atol(const char *nptr);
 int		ft_isdigit(int c);
 char	**ft_split(char const *str, char c);
+void	ft_error(char *str);
+int		ft_strlen(char *str);
 
 #endif

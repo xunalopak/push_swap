@@ -6,7 +6,7 @@
 #    By: rchampli <rchampli@student.42lyon.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/12/14 15:53:38 by rchampli          #+#    #+#              #
-#    Updated: 2022/01/11 01:04:27 by rchampli         ###   ########.fr        #
+#    Updated: 2022/01/13 21:41:32 by rchampli         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,6 +25,7 @@ SRCS = main.c \
 		stack.c\
 		utils.c\
 		utils2.c\
+		ft_split.c\
 		
 
 CC = gcc

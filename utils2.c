@@ -6,7 +6,7 @@
 /*   By: rchampli <rchampli@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/11 00:50:13 by rchampli          #+#    #+#             */
-/*   Updated: 2022/01/13 21:37:05 by rchampli         ###   ########.fr       */
+/*   Updated: 2022/01/13 23:02:08 by rchampli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,4 +15,14 @@
 int	ft_isdigit(int c)
 {
 	return (c >= 48 && c <= 57);
+}
+
+void	ft_error(char *str)
+{
+	int	n;
+
+	n = 10;
+	write(2, str, ft_strlen(str));
+	write(2, &n, 1);
+	exit(1);
 }

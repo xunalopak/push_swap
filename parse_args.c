@@ -6,7 +6,7 @@
 /*   By: rchampli <rchampli@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/11 00:43:19 by rchampli          #+#    #+#             */
-/*   Updated: 2022/01/13 21:36:50 by rchampli         ###   ########.fr       */
+/*   Updated: 2022/01/13 23:35:51 by rchampli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,10 @@ bool	check_range_nduplicated(char *str, t_stack *stack_a, int *nbr)
 	long	num;
 	t_node	*curr;
 
+	if ((str[0] == '+' || str[0] == '-') && str[1] == '\0')
+		ft_error("Error");
 	num = ft_atol(str);
-	if (num > INT_MAX || num < INT_MIN)
+	if (num > 2147483647 || num < -2147483648)
 		return (false);
 	curr = stack_a->head;
 	while (curr)
@@ -73,8 +75,8 @@ bool	parse_argvs(int argc, char *argv[], t_stack *stack_a)
 		str_idx = -1;
 		while (strs[++str_idx])
 		{
-			if (check_digit(strs[str_idx]) == false || \
-				check_range_nduplicated(strs[str_idx], stack_a, &nbr) == false)
+			if (check_digit(strs[str_idx]) == 0 || \
+			check_range_nduplicated(strs[str_idx], stack_a, &nbr) == 0)
 			{
 				free(strs);
 				return (false);
