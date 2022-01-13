@@ -6,11 +6,9 @@
 /*   By: rchampli <rchampli@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/11 00:44:36 by rchampli          #+#    #+#             */
-/*   Updated: 2022/01/11 00:51:20 by rchampli         ###   ########.fr       */
+/*   Updated: 2022/01/13 21:36:33 by rchampli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-
 
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
